@@ -1,0 +1,35 @@
+name: MedQuizQA
+
+# on:
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
+on: push
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      # matrix:
+      #   python-version: [3.9]
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install dependencies
+      run: |        
+        npm ci
+
+    - name: Start dev server
+      run: |
+        npm run dev &
+
+    - name: Run Cypress Tests
+      uses: cypress-io/github-action@v5
+      with:
+        working-directory: ./
+        # wait-on: 'http://localhost:3000'
