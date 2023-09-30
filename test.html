@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div Pagination</title>
+    <style>
+
+        body {
+            background-color: rgb(233, 233, 226);
+        }
+
+        .content {
+            /* text-align: center; */
+            width: 80%;
+            height: 85vh;
+            margin: 0 auto; /* Center horizontally */
+            background-color: lightyellow; /* Set the background color to light yellow */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            overflow-y: auto;
+            
+            font-family: "Consolas", sans-serif; /* Replace "Your Font" with the desired font name */
+            font-size: 20px; /* Replace with your preferred font size */
+            font-weight: normal; 
+        }
+
+        #pageNumbers button.highlighted {
+            background-color: rgb(84, 136, 231); /* Change the color to your preferred highlight color */
+        }
+
+        .myPage {
+            display: none;
+        }
+
+        .myPage.active {
+            display: block;
+        }
+
+        #pageNumbers {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .navigation {
+            text-align: center;
+        }
+
+        #imageContainer {
+            width: 30%;
+        }
+
+        #imageContainer img {
+            width: 110%;
+        }
+
+        .row {
+            display: block; /* Ensures each row starts on a new line */
+        }
+
+        #imageContainer {
+            margin-left: 35%;
+        }
+
+        .column {
+            display: inline-block;
+            width: 100%; /* Adjust the width as needed to control the column width */
+            box-sizing: border-box; /* Ensure padding and borders are included in the width */
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="myPage active">
+            Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.
+            Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.
+            Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.Page 1: This is the content of Page 1.
+        </div>
+        <div class="myPage">Page 2: This is the content of Page 2.</div>
+        <div class="myPage">Page 3: This is the content of Page 3.</div>
+        <div class="myPage">Page 4: This is the content of Page 4.</div>
+        <div class="myPage">
+            <div id="imageContainer"  >
+                <img src="https://www.uio.no/link/bilder/link-forsidebilde-mobil.jpg" alt="" />
+            </div>
+            
+            <div id="textContainer"  class="column">
+                Page 5: This is the content of Page 5.This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5
+                This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5
+              
+    
+            </div>
+
+        </div>
+        <div class="myPage">
+            <div id="imageContainer"  >
+                <img src="https://pagedart.com/images/add-google-search-to-a-website/add-google-search-to-a-website.jpg" alt="" />
+            </div>
+            <div id="textContainer"  class="column">
+                Page 5: This is the content of Page 5.This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5
+                This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 5This is the content of Page 
+    
+            </div>
+            
+        </div>
+        <div class="myPage">sdfsdfsdgsg.</div>
+        <div class="myPage">sdfsdfsdf.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 5: This is the content of Page 5.</div>
+        <div class="myPage">Page 111: This is the content of Page 111.</div>
+        
+    </div>
+
+    <div class="navigation">
+        <div id="pageNumbers">
+            <!-- Page numbers will be inserted here dynamically -->
+        </div>
+
+        <button id="prevBtn" disabled>Previous</button>
+        <button id="nextBtn">Next</button>
+    </div>
+
+    <script>
+        const pages = document.querySelectorAll('.myPage');
+        const prevButton = document.getElementById('prevBtn');
+        const nextButton = document.getElementById('nextBtn');
+        const pageNumbersContainer = document.getElementById('pageNumbers');
+        let currentPage = 0;
+
+        function showPage(pageIndex) {
+            pages.forEach((page, index) => {
+                if (index === pageIndex) {
+                    page.classList.add('active');
+                } else {
+                    page.classList.remove('active');
+                }
+            });
+        }
+
+        function highlightPageNumberButton(buttonIndex) {
+            const pageNumberButtons = document.querySelectorAll('#pageNumbers button');
+            pageNumberButtons.forEach((button, index) => {
+                if (index === buttonIndex) {
+                    button.classList.add('highlighted');
+                } else {
+                    button.classList.remove('highlighted');
+                }
+            });
+        }
+
+        function updateButtonState() {
+            prevButton.disabled = currentPage === 0;
+            nextButton.disabled = currentPage === pages.length - 1;
+        }
+
+        function createPageNumberButtons() {
+            pages.forEach((page, index) => {
+                const pageNumberButton = document.createElement('button');
+                if (index === 0) {
+                    pageNumberButton.classList.add('highlighted'); // Highlight the first button
+                }
+                pageNumberButton.textContent = index + 1;
+                pageNumberButton.addEventListener('click', () => {
+                    currentPage = index;
+                    showPage(currentPage);
+                    highlightPageNumberButton(currentPage);
+                    updateButtonState();
+                });
+                pageNumbersContainer.appendChild(pageNumberButton);
+            });
+        }
+
+        prevButton.addEventListener('click', () => {
+            if (currentPage > 0) {
+                currentPage--;
+                showPage(currentPage);
+                highlightPageNumberButton(currentPage);
+                updateButtonState();
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            if (currentPage < pages.length - 1) {
+                currentPage++;
+                showPage(currentPage);
+                highlightPageNumberButton(currentPage);
+                updateButtonState();
+            }
+        });
+
+        createPageNumberButtons();
+        updateButtonState();
+    </script>
+</body>
+</html>
