@@ -54,10 +54,11 @@
         #imageContainer img {
             width: 110%;
         }
-
-        .row {
-            display: block; /* Ensures each row starts on a new line */
-        }
+        
+        /* Ensures each row starts on a new line */
+        /*.row {
+            display: block; 
+        } */
 
         #imageContainer {
             margin-left: 35%;
@@ -184,6 +185,7 @@
                     pageNumberButton.classList.add('highlighted'); // Highlight the first button
                 }
                 pageNumberButton.textContent = index + 1;
+                pageNumberButton.id = `button-${index}`;
                 pageNumberButton.addEventListener('click', () => {
                     currentPage = index;
                     showPage(currentPage);
